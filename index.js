@@ -2,7 +2,7 @@ const apiFunctions = require('./apiFunctions');
 const express = require('express')
 const app = express()
 var cors = require('cors');
-const port = 3000
+var port = process.env.PORT || 8080;
 
 app.get('/api', async (request, response) => {
     console.log('Received request');

@@ -15,7 +15,7 @@ async function callToThirdPartyAPI(){
         //else resolve(result['xml']['words'][0]['word'][0]);
         else resolve(JSON.stringify(result));
       }));
-
+    console.log('Sending data');
     return word;
 }
 function call(){

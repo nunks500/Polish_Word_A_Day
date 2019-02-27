@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>One word of Polish each day</title>
+<body>
+    <script>
+
+        //var result = $(xml).find("album").text();
+        apiGetAll().then(function(res) {
+            console.log(res);
+        });
+
+    async function apiGetAll () {
+
+   fetch('https://polishlearn.herokuapp.com/', {
+       method: 'GET',
+   }).then((response) => {
+        response.json().then((res) => {
+            console.log(res);
+        }).catch(function(err) {
+            console.log('Fetch problem: ' + err.message);
+        });
+    });
+}
+    </script>
+    <h1>One word of Polish each day</h1>
+</body>
+</html>
+

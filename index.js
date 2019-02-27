@@ -4,7 +4,7 @@ const app = express()
 var cors = require('cors');
 var port = process.env.PORT || 8080;
 
-app.get('/', async (request, response) => {
+app.get('/api', async (request, response) => {
     console.log('Received request');
     
      // use it before all route definitions

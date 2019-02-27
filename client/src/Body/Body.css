@@ -1,0 +1,45 @@
+.Body{
+    font-family: "Century Gothic";
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top:8%;
+}
+
+.PhrasePL{
+    display: inline-block;
+    margin-top:7.5%;
+    font-size:26px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.PhraseEN{
+    text-decoration: underline;
+}
+
+.Word{
+    font-size: xx-large;
+}
+
+.Translation{
+    font-size: xx-large;
+    margin-top:10%;
+}
+
+.playbutton{
+    margin-top: 12%;
+    margin-left: 7%;
+}
+
+.playbuttonPhrase:hover{
+    color:blue;
+}
+
+.playbutton:hover{
+    color:blue;
+}
+
+.wrapper{
+    display: inline-flex;
+}

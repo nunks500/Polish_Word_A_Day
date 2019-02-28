@@ -9,7 +9,7 @@ class Footer extends Component {
             return (
                 <div className="Footer">
                     <FontAwesomeIcon icon={faCoffee}  />
-                    <div><strong>Designed by <a href="www.github.com/nunks500">Joel Dinis</a></strong></div>
+                    <div><strong>Designed by <a href="http://www.github.com/nunks500">Joel Dinis</a></strong></div>
                 </div>
             );
         }

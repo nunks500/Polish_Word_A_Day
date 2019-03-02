@@ -24,14 +24,14 @@ class App extends Component {
             <Route path="/ar/" component={this.AR} />
             <Route path="/hi/" component={this.HI} />
             <Route path="/no/" component={this.NO} />
-            <Route path="/" component={this.PL} />
+            <Route path="/" exact component={this.PL} />
             </span>
           </Router>
         );   
    }
 
    HI(){
-    return(<div className="App">
+    return(<div className="AppHI">
     <Header title = {'Hindi'}/>
     <Body lang={'hi'}/>
     <Footer />
@@ -63,7 +63,7 @@ class App extends Component {
    }
 
    DE(){
-    return(<div className="App">
+    return(<div className="AppDE">
     <Header title = {'German'}/>
     <Body lang={'de'}/>
     <Footer />
@@ -71,7 +71,7 @@ class App extends Component {
    }
 
    FR(){
-    return(<div className="App">
+    return(<div className="AppFR">
     <Header title = {'French'}/>
     <Body lang={'fr'}/>
     <Footer />
@@ -87,7 +87,7 @@ class App extends Component {
    }
 
    RU(){
-    return(<div className="App">
+    return(<div className="AppRU">
     <Header title = {'Russian'}/>
     <Body lang={'ru'}/>
     <Footer />
@@ -95,7 +95,7 @@ class App extends Component {
    }
 
    IT(){
-    return(<div className="App">
+    return(<div className="AppIT">
     <Header title = {'Italian'}/>
     <Body lang={'it'}/>
     <Footer />
@@ -103,7 +103,7 @@ class App extends Component {
    }
 
    JP(){
-    return(<div className="App">
+    return(<div className="AppJP">
     <Header title = {'Japanese'}/>
     <Body lang={'jp'}/>
     <Footer />
@@ -119,7 +119,7 @@ class App extends Component {
   }
 
   PT(){
-    return(<div className="App">
+    return(<div className="AppPT">
     <Header title = {'Portuguese'}/>
     <Body lang={'pt'}/>
     <Footer />
@@ -127,7 +127,7 @@ class App extends Component {
   }
 
   ES(){
-    return(<div className="App">
+    return(<div className="AppES">
     <Header title = {'Spanish'}/>
     <Body lang={'es'}/>
     <Footer />

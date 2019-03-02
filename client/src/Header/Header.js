@@ -6,7 +6,7 @@ class Header extends Component {
         render(){
             return (
                 <div className="Header">
-                    <div>One word of Polish each day</div>
+                    <div>One word of {this.props.title} each day</div>
                 </div>
             );
         }

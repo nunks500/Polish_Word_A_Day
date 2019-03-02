@@ -3,58 +3,136 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Body from './Body/Body';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
-
-    componentDidMount() {
-      fetch('/api', {
-        headers : { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }})
-         .then(response => {
-          return response.json();
-        }).then(data => {
-          // Work with JSON data here
-          const siteprops = {
-            siteprops: {
-              wordOfTheDay: JSON.parse(data)['xml']['words'][0]['word'][0],
-              translation: JSON.parse(data)['xml']['words'][0]['translation'][0],
-              phrase: JSON.parse(data)['xml']['words'][0]['enphrase'][0],
-              plphrase: JSON.parse(data)['xml']['words'][0]['fnphrase'][0],
-              wordtype: JSON.parse(data)['xml']['words'][0]['wordtype'][0],
-              wordsound: JSON.parse(data)['xml']['words'][0]['wordsound'][0],
-              phrasesound: JSON.parse(data)['xml']['words'][0]['phrasesound'][0],
-            }
-          }
-
-          this.setState(siteprops);
-
-        }).catch(err => {
-          // Do something for an error here
-          console.log("Error Reading data " + err);
-        });
-    }
   
     render() {
-      if (this.state === null) {
-        // Render loading state ...
         return (
-          <div className="AppLoading">
-            <h1> . . .</h1>
-          </div>
-        );  
-      } else {
-
-        return (
-            <div className="App">
-              <Header />
-              <Body siteprops = {this.state.siteprops} />
-              <Footer />
-            </div>
+          <Router>
+            <span className="spanWrapper">
+            <Route path="/pl/" exact component={this.PL} />
+            <Route path="/pt/" component={this.PT} />
+            <Route path="/es/" component={this.ES} />
+            <Route path="/jp/" component={this.JP} />
+            <Route path="/it/" component={this.IT} />
+            <Route path="/ru/" component={this.RU} />
+            <Route path="/kr/" component={this.KR} />
+            <Route path="/fr/" component={this.FR} />
+            <Route path="/de/" component={this.DE} />
+            <Route path="/se/" component={this.SE} />
+            <Route path="/ar/" component={this.AR} />
+            <Route path="/hi/" component={this.HI} />
+            <Route path="/no/" component={this.NO} />
+            <Route path="/" component={this.PL} />
+            </span>
+          </Router>
         );   
-      }
    }
+
+   HI(){
+    return(<div className="App">
+    <Header title = {'Hindi'}/>
+    <Body lang={'hi'}/>
+    <Footer />
+  </div>);
+   }
+
+   NO(){
+    return(<div className="App">
+    <Header title = {'Norwegian'}/>
+    <Body lang={'no'}/>
+    <Footer />
+  </div>);
+   }
+
+   AR(){
+    return(<div className="App">
+    <Header title = {'Arabic'}/>
+    <Body lang={'ar'}/>
+    <Footer />
+  </div>);
+   }
+
+   SE(){
+    return(<div className="App">
+    <Header title = {'Swedish'}/>
+    <Body lang={'se'}/>
+    <Footer />
+  </div>);
+   }
+
+   DE(){
+    return(<div className="App">
+    <Header title = {'German'}/>
+    <Body lang={'de'}/>
+    <Footer />
+  </div>);
+   }
+
+   FR(){
+    return(<div className="App">
+    <Header title = {'French'}/>
+    <Body lang={'fr'}/>
+    <Footer />
+  </div>);
+   }
+
+   KR(){
+    return(<div className="App">
+    <Header title = {'Korean'}/>
+    <Body lang={'kr'}/>
+    <Footer />
+  </div>);
+   }
+
+   RU(){
+    return(<div className="App">
+    <Header title = {'Russian'}/>
+    <Body lang={'ru'}/>
+    <Footer />
+  </div>);
+   }
+
+   IT(){
+    return(<div className="App">
+    <Header title = {'Italian'}/>
+    <Body lang={'it'}/>
+    <Footer />
+  </div>);
+   }
+
+   JP(){
+    return(<div className="App">
+    <Header title = {'Japanese'}/>
+    <Body lang={'jp'}/>
+    <Footer />
+  </div>);
+   }
+
+   PL(){
+    return(<div className="App">
+    <Header title = {'Polish'}/>
+    <Body lang={'pl'}/>
+    <Footer />
+  </div>);
+  }
+
+  PT(){
+    return(<div className="App">
+    <Header title = {'Portuguese'}/>
+    <Body lang={'pt'}/>
+    <Footer />
+  </div>);
+  }
+
+  ES(){
+    return(<div className="App">
+    <Header title = {'Spanish'}/>
+    <Body lang={'es'}/>
+    <Footer />
+  </div>);
+  }
 }
 
 export default App;

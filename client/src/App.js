@@ -39,7 +39,7 @@ class App extends Component {
    }
 
    NO(){
-    return(<div className="App">
+    return(<div className="AppNO">
     <Header title = {'Norwegian'}/>
     <Body lang={'no'}/>
     <Footer />
@@ -47,7 +47,7 @@ class App extends Component {
    }
 
    AR(){
-    return(<div className="App">
+    return(<div className="AppAE">
     <Header title = {'Arabic'}/>
     <Body lang={'ar'}/>
     <Footer />
@@ -55,7 +55,7 @@ class App extends Component {
    }
 
    SE(){
-    return(<div className="App">
+    return(<div className="AppSE">
     <Header title = {'Swedish'}/>
     <Body lang={'se'}/>
     <Footer />
@@ -79,7 +79,7 @@ class App extends Component {
    }
 
    KR(){
-    return(<div className="App">
+    return(<div className="AppKR">
     <Header title = {'Korean'}/>
     <Body lang={'kr'}/>
     <Footer />
